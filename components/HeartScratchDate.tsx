@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect, useCallback } from "react";
-import { Heart, Sparkles, RotateCcw, CheckCircle2 } from "lucide-react";
+import { Heart, Sparkles, RotateCcw, CheckCircle2, Calendar } from "lucide-react";
 import { SectionContainer } from "./SectionContainer";
 import { SectionTitle } from "./SectionTitle";
 import { FloralCorner, FloralGarland, FloralFlourish } from "./FloralDecorations";
@@ -510,12 +510,17 @@ export function HeartScratchDate() {
         <div className="mt-2 flex flex-col items-center gap-2">
           {isRevealed ? (
             <div className="flex items-center gap-2">
-              <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/60 border border-[#D8B86A]/50 text-[#2B2528] shadow-sm">
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#B76E79]" />
+              <a
+                href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding%20of%20S.%20Mohamed%20Dil%20Nawaz%20%26%20A.%20Sharmila%20Begum&dates=20261018/20261019&details=Join%20us%20in%20celebrating%20our%20wedding%20Insha%20allah.&location=Zai%20Palace%2C%20Chennai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[rgba(216,184,106,0.8)] to-[rgba(180,140,80,0.8)] text-[#140C12] border border-[#D8B86A]/60 shadow-sm transition-all hover:scale-105 active:scale-95"
+              >
+                <Calendar className="w-3.5 h-3.5" />
                 <span className="font-sans text-[10.5px] uppercase tracking-wider font-bold">
-                  Date Revealed
+                  Add to Calendar
                 </span>
-              </div>
+              </a>
 
               <button
                 type="button"
