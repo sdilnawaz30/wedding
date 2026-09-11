@@ -1,0 +1,226 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-jakarta), "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-script: var(--font-script), "Alex Brush", cursive;
+  --font-arabic: var(--font-arabic), "Amiri", serif;
+
+  /* Global Romantic Pink - White - Gold Palette */
+  --color-rose-primary: #D45B7D;
+  --color-rose-gentle: #E88FA8;
+  --color-rose-deep: #521E30;
+  --color-blush-soft: #FDEEF3;
+  --color-blush-accent: #F9D9E3;
+
+  --color-gold-metallic: #C59A3F;
+  --color-gold-bright: #F3D785;
+  --color-gold-champagne: #E8CCA4;
+  --color-gold-dark: #9C7328;
+
+  --color-white-pure: #FFFFFF;
+  --color-white-pearl: #FFF9FB;
+}
+
+:root {
+  --wedding-bg: #FFF9FB;
+  --wedding-card-bg: #FFFFFF;
+  --wedding-card-border: rgba(197, 154, 63, 0.35);
+
+  --wedding-rose-primary: #D45B7D;
+  --wedding-rose-gentle: #E88FA8;
+  --wedding-rose-deep: #521E30;
+  --wedding-blush: #FDEEF3;
+
+  --wedding-gold: #C59A3F;
+  --wedding-gold-bright: #F3D785;
+  --wedding-gold-dark: #9C7328;
+
+  --wedding-text-primary: #521E30;
+  --wedding-text-secondary: #D45B7D;
+  --wedding-text-muted: #9C7328;
+  --wedding-text-gold: #C59A3F;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+  background-color: #0D1524;
+}
+
+body {
+  font-family: var(--font-jakarta), system-ui, sans-serif;
+  color: #FFF9FB;
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #0D1524;
+}
+
+/* Custom Royal Gold & Evening Dusk Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D1524;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C59A3F;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E8A2B5;
+}
+
+/* Metallic Gold Foil Gradient Text */
+.gold-text-gradient {
+  background: linear-gradient(120deg, #9C7328 0%, #F3D785 25%, #C59A3F 50%, #FFF4D0 75%, #A87925 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Romantic Rose Pink Gradient Text */
+.rose-pink-gradient-text {
+  background: linear-gradient(135deg, #D45B7D 0%, #E88FA8 50%, #C25072 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Metallic Gold Foil Background */
+.gold-foil-bg {
+  background: linear-gradient(120deg, #9C7328 0%, #F3D785 25%, #C59A3F 50%, #FFF4D0 75%, #A87925 100%);
+}
+
+/* Pure Pearl White & Soft Blush Desktop Ambient Background */
+.wedding-ambient-bg {
+  background-color: #0D1524;
+}
+
+/* =========================================================
+   LIGHT FROSTED GLASSMORPHISM
+   Luxury light frosted glass + soft borders + gentle shadow
+   ========================================================= */
+.champagne-card,
+.wedding-card {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+}
+
+.champagne-tile {
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+}
+
+.champagne-pill {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+}
+
+/* Islamic Arch Royal Stationery Card */
+.islamic-arch-card {
+  border-radius: 28px 28px 18px 18px;
+  position: relative;
+}
+
+/* Subtle White Foil Hairline Border Frame */
+.gold-foil-border {
+  position: relative;
+}
+
+.gold-foil-border::after {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* =========================================================
+   LIGHT STATIONERY PRINT TYPOGRAPHY SHADOWS
+   Subtle light depth for dark text on light backgrounds
+   ========================================================= */
+.text-shadow-names {
+  color: #FFFDF8 !important;
+  -webkit-text-fill-color: #FFFDF8 !important;
+  /* Use text-shadow for a safe 1px outline that doesn't eat the thin script font, plus a soft shadow */
+  text-shadow:
+    -0.5px -0.5px 0 rgba(30, 20, 25, 0.8),
+    0.5px -0.5px 0 rgba(30, 20, 25, 0.8),
+    -0.5px 0.5px 0 rgba(30, 20, 25, 0.8),
+    0.5px 0.5px 0 rgba(30, 20, 25, 0.8),
+    0 3px 6px rgba(0, 0, 0, 0.3) !important;
+}
+
+.text-shadow-arabic {
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 0 1px rgba(255, 255, 255, 0.9);
+}
+
+.text-shadow-light {
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* =========================================================
+   SCRATCH REVEAL GOLD LIGHT SWEEP & PETAL ANIMATIONS
+   ========================================================= */
+@keyframes goldSweep {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0.9;
+  }
+
+  70% {
+    opacity: 0.9;
+  }
+
+  100% {
+    transform: translateX(250%) skewX(-20deg);
+    opacity: 0;
+  }
+}
+
+.gold-sweep-anim {
+  animation: goldSweep 1.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes petalFall {
+  0% {
+    transform: translate3d(var(--x-start, 0), -40px, 0) rotate(0deg) rotateY(0deg);
+    opacity: 0;
+  }
+
+  12% {
+    opacity: var(--petal-opacity, 0.9);
+  }
+
+  85% {
+    opacity: var(--petal-opacity, 0.9);
+  }
+
+  100% {
+    transform: translate3d(var(--x-end, 30px), 105vh, 0) rotate(var(--rot-end, 360deg)) rotateY(180deg);
+    opacity: 0;
+  }
+}
+
+.falling-petal {
+  animation: petalFall var(--duration, 3.2s) cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
