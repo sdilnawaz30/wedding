@@ -125,7 +125,7 @@ export function PageContainer({
 
           {/* Agency Credit */}
           <p className="font-sans text-[8.5px] uppercase tracking-[0.2em] text-[#D8B86A]/60 mt-8 pb-1">
-            Designed by wisdotech.in
+            Designed by <a href="https://wisdotech.in" target="_blank" rel="noopener noreferrer" className="hover:text-[#D8B86A] transition-colors underline decoration-[#D8B86A]/30 hover:decoration-[#D8B86A] underline-offset-4">wisdotech.in</a>
           </p>
         </footer>
       </div>
