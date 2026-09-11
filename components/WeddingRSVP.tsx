@@ -1,18 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { Heart, Send, CheckCircle, XCircle } from "lucide-react";
+import React from "react";
+import { Heart, CheckCircle } from "lucide-react";
 import { SectionContainer } from "./SectionContainer";
 import { SectionTitle } from "./SectionTitle";
-import { getWhatsAppRsvpUrl } from "@/lib/weddingData";
 
 export function WeddingRSVP() {
-  const [hasResponded, setHasResponded] = useState(false);
-
-  const handleAttendance = () => {
-    setHasResponded(true);
-  };
 
   return (
     <SectionContainer
@@ -48,8 +41,6 @@ export function WeddingRSVP() {
           <span className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-[#D8B86A]/60 to-transparent" />
         </div>
 
-        {!hasResponded ? (
-          <>
             {/* Invitation Message */}
             <p className="font-serif italic text-xs sm:text-sm text-[#FFF4E6] leading-relaxed max-w-[310px] mx-auto mb-6 font-medium opacity-90">
               &ldquo;We would be blessed to have you with us
@@ -59,31 +50,16 @@ export function WeddingRSVP() {
 
             {/* ACTION BUTTON */}
             <div className="w-full flex flex-col gap-3 z-10 px-4">
-              <button
-                onClick={handleAttendance}
-                type="button"
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeicqH7YFxIkE6JIkamlGWn08D-vAf9ReqI4LzdYK4rFTzARw/viewform?usp=publish-editor"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group relative w-full py-4 px-6 rounded-xl bg-gradient-to-r from-[rgba(216,184,106,0.8)] to-[rgba(180,140,80,0.8)] text-[#140C12] font-sans font-bold text-[13px] uppercase tracking-[0.24em] transition-all duration-300 shadow-md border border-[#D8B86A]/60 hover:from-[rgba(216,184,106,1)] hover:to-[rgba(180,140,80,1)] hover:shadow-[0_0_15px_rgba(216,184,106,0.5)] flex items-center justify-center gap-3 cursor-pointer active:scale-95"
               >
                 <CheckCircle className="w-5 h-5 text-[#140C12] transition-transform group-hover:scale-110" />
-                <span>CONFIRM ATTENDANCE</span>
-              </button>
+                <span>MARK MY ATTENDANCE</span>
+              </a>
             </div>
-          </>
-        ) : (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="flex flex-col items-center mt-2 px-2"
-          >
-            <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center mb-3">
-              <CheckCircle className="w-7 h-7 text-green-400" />
-            </div>
-            <p className="font-serif italic text-lg sm:text-xl text-[#E8D39A] leading-relaxed font-bold">
-              Thanks for your precious blessings for our marriage!
-            </p>
-          </motion.div>
-        )}
 
         {/* Islamic Ending Flourish */}
         <div className="w-full pt-4 mt-6 border-t border-[#D8B86A]/20 flex flex-col items-center justify-center">
