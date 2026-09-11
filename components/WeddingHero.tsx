@@ -14,6 +14,7 @@ interface WeddingHeroProps {
   weddingDate?: string;
   ceremonyTime?: string;
   videoSrc?: string;
+  isActive?: boolean;
   className?: string;
 }
 
@@ -26,8 +27,19 @@ export function WeddingHero({
   brideRole = "Professor",
   weddingDate = "Sunday, 18 October 2026",
   videoSrc = "/videos/bg video.mp4",
+  isActive = true,
   className,
 }: WeddingHeroProps) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  React.useEffect(() => {
+    if (!videoRef.current) return;
+    if (isActive) {
+      videoRef.current.play().catch(() => {});
+    } else {
+      videoRef.current.pause();
+    }
+  }, [isActive]);
   const scrollToContent = () => {
     const blessingEl = document.getElementById("blessing-section");
     if (blessingEl) {
@@ -51,8 +63,8 @@ export function WeddingHero({
       {/* LAYER 2 — FIRST SECTION VIDEO */}
       {/* Video scrolls naturally up as user scrolls down */}
       <video
+        ref={videoRef}
         src={videoSrc}
-        autoPlay
         muted
         playsInline
         loop

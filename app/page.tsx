@@ -17,6 +17,7 @@ export default function Home() {
   const [showCinematicIntro, setShowCinematicIntro] = useState(true);
   const [isOpened, setIsOpened] = useState(true);
   const [shouldPlayAudio, setShouldPlayAudio] = useState(false);
+  const [heroReady, setHeroReady] = useState(false);
   const [introKey, setIntroKey] = useState(0);
 
   const groomName = weddingData.couple.groom.fullName;
@@ -38,9 +39,11 @@ export default function Home() {
       {/* 0. Brand New Cinematic Video Intro Experience */}
       {showCinematicIntro && (
         <CinematicIntro
+          onTransitionStart={() => setHeroReady(true)}
           onComplete={() => {
             setShowCinematicIntro(false);
             setShouldPlayAudio(true);
+            setHeroReady(true); // Fallback to ensure it's ready
           }}
         />
       )}
@@ -62,6 +65,7 @@ export default function Home() {
       >
         {/* Cinematic Islamic Wedding Hero */}
         <WeddingHero
+          isActive={heroReady || !showCinematicIntro}
           groomName={groomName}
           groomDegree={weddingData.couple.groom.degree}
           groomRole={weddingData.couple.groom.profession}

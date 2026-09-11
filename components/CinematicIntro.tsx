@@ -4,9 +4,10 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 
 interface CinematicIntroProps {
   onComplete: () => void;
+  onTransitionStart?: () => void;
 }
 
-export function CinematicIntro({ onComplete }: CinematicIntroProps) {
+export function CinematicIntro({ onComplete, onTransitionStart }: CinematicIntroProps) {
   const [hasTapped, setHasTapped] = useState(false);
   const [isFadingOut, setIsFadingOut] = useState(false);
   const [isDone, setIsDone] = useState(false);
@@ -16,7 +17,7 @@ export function CinematicIntro({ onComplete }: CinematicIntroProps) {
   // Time in milliseconds when the bright flash occurs in the video
   const FLASH_TIME_MS = 6000; 
 
-  // Lock body scroll while the intro is active
+  // Lock body scroll while the intro is active & Clean up video memory on unmount
   useEffect(() => {
     if (isDone) return;
     
@@ -29,6 +30,13 @@ export function CinematicIntro({ onComplete }: CinematicIntroProps) {
     return () => {
       document.body.style.overflow = originalOverflow;
       document.body.style.touchAction = originalTouchAction;
+      
+      // Violently purge video from mobile RAM
+      if (videoRef.current) {
+        videoRef.current.pause();
+        videoRef.current.removeAttribute('src');
+        videoRef.current.load();
+      }
     };
   }, [isDone]);
 
@@ -54,13 +62,14 @@ export function CinematicIntro({ onComplete }: CinematicIntroProps) {
       transitionTriggered.current = true;
       
       setIsFadingOut(true);
+      if (onTransitionStart) onTransitionStart();
       
       setTimeout(() => {
         setIsDone(true);
         onComplete();
       }, 1200); 
     }, FLASH_TIME_MS);
-  }, [hasTapped, onComplete]);
+  }, [hasTapped, onComplete, onTransitionStart]);
 
   // 5-second automatic fallback timeout if user does not tap
   useEffect(() => {
@@ -94,12 +103,13 @@ export function CinematicIntro({ onComplete }: CinematicIntroProps) {
       {!hasTapped && (
         <div 
           className="absolute inset-0 z-10 flex flex-col items-center justify-center cursor-pointer touch-none"
-          onPointerDown={handleTap}
-          onTouchStart={handleTap}
-          onClick={handleTap}
+          onPointerDown={(e) => {
+            e.stopPropagation();
+            handleTap(e);
+          }}
         >
           <div className="flex flex-col items-center gap-2 opacity-90 hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-            <div className="px-5 py-2 rounded-full border border-white/20 bg-black/20 backdrop-blur-sm shadow-lg flex items-center gap-2 animate-pulse">
+            <div className="px-5 py-2 rounded-full border border-white/20 bg-black/40 shadow-lg flex items-center gap-2 animate-pulse">
               <span className="w-1.5 h-1.5 rounded-full bg-white/80" />
               <span className="font-sans text-[11px] uppercase tracking-[0.3em] text-white/90 font-medium">
                 Tap to Open
