@@ -10,9 +10,11 @@ import { NikkahEvent } from "@/components/NikkahEvent";
 import { ValimaEvent } from "@/components/ValimaEvent";
 import { WeddingRSVP } from "@/components/WeddingRSVP";
 import { EnvelopeIntro } from "@/components/EnvelopeIntro";
+import { CinematicIntro } from "@/components/CinematicIntro";
 import { weddingData } from "@/lib/weddingData";
 
 export default function Home() {
+  const [showCinematicIntro, setShowCinematicIntro] = useState(true);
   const [isOpened, setIsOpened] = useState(true);
   const [shouldPlayAudio, setShouldPlayAudio] = useState(false);
   const [introKey, setIntroKey] = useState(0);
@@ -33,8 +35,18 @@ export default function Home() {
 
   return (
     <>
+      {/* 0. Brand New Cinematic Video Intro Experience */}
+      {showCinematicIntro && (
+        <CinematicIntro
+          onComplete={() => {
+            setShowCinematicIntro(false);
+            setShouldPlayAudio(true);
+          }}
+        />
+      )}
+
       {/* 1. Full-Screen 3D Envelope Opening Experience (Available via Replay) */}
-      {!isOpened && (
+      {!isOpened && !showCinematicIntro && (
         <EnvelopeIntro
           key={introKey}
           onOpen={handleOpen}
