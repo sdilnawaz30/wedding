@@ -191,7 +191,7 @@ export function FamilyInvitation() {
           </blockquote>
 
           <p className="font-serif font-bold text-xs text-[#B76E79] mt-2 tracking-wider">
-            In Sha Allah
+            Insha allah
           </p>
         </div>
       </div>
