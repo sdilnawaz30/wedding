@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 
 interface CinematicIntroProps {
   onComplete: () => void;
@@ -13,8 +13,8 @@ export function CinematicIntro({ onComplete }: CinematicIntroProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const transitionTriggered = useRef(false);
 
-  // Time in seconds when the bright flash occurs in the video to start the crossfade
-  const FLASH_TIME_SECONDS = 6.0; 
+  // Time in milliseconds when the bright flash occurs in the video
+  const FLASH_TIME_MS = 6000; 
 
   // Lock body scroll while the intro is active
   useEffect(() => {
@@ -26,51 +26,58 @@ export function CinematicIntro({ onComplete }: CinematicIntroProps) {
     document.body.style.overflow = "hidden";
     document.body.style.touchAction = "none";
     
-    // Attempt to force the first frame to render on mobile browsers
-    if (videoRef.current) {
-      videoRef.current.currentTime = 0.1;
-    }
-    
     return () => {
       document.body.style.overflow = originalOverflow;
       document.body.style.touchAction = originalTouchAction;
     };
   }, [isDone]);
 
-  const handleTap = () => {
-    if (hasTapped) return;
+  const handleTap = useCallback((e?: React.SyntheticEvent) => {
+    if (e) {
+      // Prevent duplicate events (e.g. firing both touchstart and click)
+      e.preventDefault(); 
+      e.stopPropagation();
+    }
+    
+    if (hasTapped || transitionTriggered.current) return;
+    
     setHasTapped(true);
     
-    // Start playing the video from the beginning
+    // Start playing immediately without heavy DOM manipulations
     if (videoRef.current) {
-      videoRef.current.currentTime = 0;
-      videoRef.current.play().catch((e) => console.log("Video play failed:", e));
+      videoRef.current.play().catch((err) => console.log("Video play failed:", err));
     }
-  };
 
-  const handleTimeUpdate = () => {
-    if (!videoRef.current || transitionTriggered.current) return;
-    
-    // Check if the video has reached the flash point
-    if (videoRef.current.currentTime >= FLASH_TIME_SECONDS) {
+    // Schedule the flash transition independently of React state polling
+    setTimeout(() => {
+      if (transitionTriggered.current) return;
       transitionTriggered.current = true;
       
-      // Start the fade out
       setIsFadingOut(true);
       
-      // Wait for the CSS fade transition to complete before unmounting
       setTimeout(() => {
         setIsDone(true);
         onComplete();
-      }, 1200); // 1.2s crossfade duration to melt smoothly into the background
-    }
-  };
+      }, 1200); 
+    }, FLASH_TIME_MS);
+  }, [hasTapped, onComplete]);
+
+  // 5-second automatic fallback timeout if user does not tap
+  useEffect(() => {
+    if (hasTapped) return;
+    
+    const autoPlayTimer = setTimeout(() => {
+      handleTap();
+    }, 5000);
+    
+    return () => clearTimeout(autoPlayTimer);
+  }, [hasTapped, handleTap]);
 
   if (isDone) return null;
 
   return (
     <div
-      className={`fixed inset-0 z-[9999] bg-black transition-opacity duration-[1200ms] ease-in-out ${
+      className={`fixed inset-0 z-[9999] bg-black cinematic-layer transition-opacity duration-[1200ms] ease-in-out ${
         isFadingOut ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
@@ -80,17 +87,18 @@ export function CinematicIntro({ onComplete }: CinematicIntroProps) {
         muted
         playsInline
         preload="auto"
-        onTimeUpdate={handleTimeUpdate}
         className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none scale-[1.04]"
       />
 
       {/* Interactive overlay layer */}
       {!hasTapped && (
         <div 
-          className="absolute inset-0 z-10 flex flex-col items-center justify-center cursor-pointer"
+          className="absolute inset-0 z-10 flex flex-col items-center justify-center cursor-pointer touch-none"
+          onPointerDown={handleTap}
+          onTouchStart={handleTap}
           onClick={handleTap}
         >
-          <div className="flex flex-col items-center gap-2 opacity-90 hover:opacity-100 transition-opacity duration-300">
+          <div className="flex flex-col items-center gap-2 opacity-90 hover:opacity-100 transition-opacity duration-300 pointer-events-none">
             <div className="px-5 py-2 rounded-full border border-white/20 bg-black/20 backdrop-blur-sm shadow-lg flex items-center gap-2 animate-pulse">
               <span className="w-1.5 h-1.5 rounded-full bg-white/80" />
               <span className="font-sans text-[11px] uppercase tracking-[0.3em] text-white/90 font-medium">
