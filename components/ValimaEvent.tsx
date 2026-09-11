@@ -206,7 +206,7 @@ export function ValimaEvent() {
           </div>
 
           <h3 className="font-serif font-bold text-lg sm:text-xl text-[#2B2528] tracking-wide my-1">
-            Adyan & Hamahaan
+            Adyan & Hamdhaan
           </h3>
 
           <p className="font-sans text-[8.5px] uppercase tracking-[0.18em] text-[#B76E79] font-bold mt-2">
