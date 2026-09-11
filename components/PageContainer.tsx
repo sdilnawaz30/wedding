@@ -77,42 +77,7 @@ export function PageContainer({
           className
         )}
       >
-        {/* Floating Controls: Champagne pill buttons (z-50+) */}
-        <div className="fixed top-4 right-4 z-50 flex items-center gap-2 pointer-events-auto">
-          {/* Replay Envelope Intro button */}
-          {onReplayIntro && (
-            <button
-              onClick={onReplayIntro}
-              type="button"
-              title="Replay royal envelope"
-              className="group flex items-center justify-center w-8 h-8 rounded-full border border-[#D8B86A] bg-[rgba(255,248,240,0.85)] text-[#D8B86A] hover:text-[#FFF7EA] hover:bg-[#182942] hover:border-[#D8B86A] transition-all duration-300 shadow-sm cursor-pointer active:scale-95"
-              aria-label="Replay envelope intro"
-            >
-              <RotateCcw className="w-3.5 h-3.5 transition-transform group-hover:-rotate-45 text-[#D8B86A] group-hover:text-[#FFF7EA]" />
-            </button>
-          )}
-
-          {/* Music ambient control toggle button */}
-          <button
-            onClick={toggleAudio}
-            type="button"
-            title={isAudioPlaying ? "Mute music" : "Play music"}
-            className="group relative flex items-center justify-center w-8 h-8 rounded-full border border-[#D8B86A] bg-[rgba(255,248,240,0.85)] text-[#D8B86A] hover:text-[#FFF7EA] hover:bg-[#182942] hover:border-[#D8B86A] transition-all duration-300 shadow-sm cursor-pointer active:scale-95"
-            aria-label="Toggle background music"
-          >
-            {isAudioPlaying ? (
-              <Volume2 className="w-4 h-4 text-[#D8B86A] group-hover:text-[#FFF7EA] transition-transform group-hover:scale-110" />
-            ) : (
-              <VolumeX className="w-4 h-4 text-[#D8B86A] opacity-70 group-hover:opacity-100 group-hover:text-[#FFF7EA] transition-transform group-hover:scale-110" />
-            )}
-            {isAudioPlaying && (
-              <span className="absolute -top-0.5 -right-0.5 flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#E8A2B5] opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#E8A2B5]" />
-              </span>
-            )}
-          </button>
-        </div>
+        {/* Floating Controls Removed as requested */}
 
         {/* Dynamic scrollable wedding content */}
         <div className="flex-1 w-full flex flex-col">{children}</div>
@@ -156,6 +121,11 @@ export function PageContainer({
 
           <p className="font-serif italic text-[11px] text-[#E8D6B8] mt-1.5 px-2 font-medium">
             Celebrating the sacred union of S. Mohamed Dil Nawaz &amp; A. Sharmila Begum
+          </p>
+
+          {/* Agency Credit */}
+          <p className="font-sans text-[8.5px] uppercase tracking-[0.2em] text-[#D8B86A]/60 mt-8 pb-1">
+            Designed by wisdotech.in
           </p>
         </footer>
       </div>

@@ -90,7 +90,7 @@ export function CinematicIntro({ onComplete }: CinematicIntroProps) {
           className="absolute inset-0 z-10 flex flex-col items-center justify-center cursor-pointer"
           onClick={handleTap}
         >
-          <div className="mt-[25vh] flex flex-col items-center gap-2 opacity-90 hover:opacity-100 transition-opacity duration-300">
+          <div className="flex flex-col items-center gap-2 opacity-90 hover:opacity-100 transition-opacity duration-300">
             <div className="px-5 py-2 rounded-full border border-white/20 bg-black/20 backdrop-blur-sm shadow-lg flex items-center gap-2 animate-pulse">
               <span className="w-1.5 h-1.5 rounded-full bg-white/80" />
               <span className="font-sans text-[11px] uppercase tracking-[0.3em] text-white/90 font-medium">
