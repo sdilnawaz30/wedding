@@ -66,14 +66,14 @@ export function IslamicBlessing() {
             <FloralCorner position="top-right" size={24} className="-top-2 -right-2 opacity-60 mix-blend-multiply" />
 
             {/* Bismillah Calligraphy: Classic Dark Rose */}
-            <div className="h-16 w-full relative opacity-90 mb-3">
-              <Image
-                src="/bismillah.png"
-                alt="Bismillah"
-                fill
-                className="object-contain"
-                style={{ filter: "brightness(0) saturate(100%) invert(18%) sepia(45%) saturate(3020%) hue-rotate(314deg) brightness(85%) contrast(85%)" }}
-              />
+            <div className="h-16 w-full relative opacity-90 mb-3 flex items-center justify-center">
+              <span 
+                className="font-arabic text-3xl sm:text-4xl text-[#B76E79] font-bold"
+                dir="rtl"
+                lang="ar"
+              >
+                بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+              </span>
             </div>
 
             <p className="font-serif italic text-sm sm:text-base text-[#2B2528] font-semibold tracking-wide text-shadow-light">

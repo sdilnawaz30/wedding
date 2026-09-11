@@ -51,7 +51,7 @@ export function FoundationShowcase() {
             cordially invite you to honour us with your gracious presence at the
           </p>
           <p className="font-script text-3xl sm:text-4xl text-[#0D3B2E] my-1 leading-normal">
-            Nikkah Ceremony
+            Nikah Ceremony
           </p>
           <p className="font-serif italic text-xs text-[#3D5A4F]">
             of their beloved son
@@ -154,10 +154,10 @@ export function FoundationShowcase() {
                 Timings
               </p>
               <p className="font-serif font-bold text-sm text-[#0D3B2E]">
-                Nikkah: 11:00 A.M.
+                Nikah: 11:00 A.M.
               </p>
               <p className="font-sans text-xs text-[#3D5A4F] mt-0.5">
-                Valima Reception Follows (Lunch after 12:30 PM)
+                Walima Reception Follows (Lunch after 12:30 PM)
               </p>
             </div>
           </div>
@@ -171,7 +171,7 @@ export function FoundationShowcase() {
             </div>
             <div>
               <p className="font-sans text-[10px] uppercase tracking-wider text-[#A68028] font-bold">
-                Nikkah Venue
+                Nikah Venue
               </p>
               <p className="font-serif font-bold text-sm text-[#0D3B2E]">
                 EDGAH MOSQUE

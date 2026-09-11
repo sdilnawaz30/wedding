@@ -54,6 +54,9 @@ export function FamilyInvitation() {
               <h3 className="text-xl sm:text-2xl text-[#2B2528] font-bold tracking-wide">
                 Mr. Samiyullah
               </h3>
+              <p className="font-serif italic text-xs sm:text-[13px] text-[#3B3336] font-medium mt-0.5 tracking-wide">
+                (Metropolitan Transport Corporation Ltd)
+              </p>
               <div className="flex items-center gap-1.5 my-1">
                 <span className="text-[#D8B86A] text-[9px]">✦</span>
                 <span className="text-[#3B3336] italic text-sm font-medium">&amp;</span>
@@ -191,7 +194,7 @@ export function FamilyInvitation() {
           </blockquote>
 
           <p className="font-serif font-bold text-xs text-[#B76E79] mt-2 tracking-wider">
-            Insha allah
+            InshaAllah
           </p>
         </div>
       </div>

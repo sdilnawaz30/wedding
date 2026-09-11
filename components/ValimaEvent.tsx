@@ -16,13 +16,13 @@ import { SectionTitle } from "./SectionTitle";
 import { FloralCorner, FloralGarland, FloralFlourish } from "./FloralDecorations";
 import { FloralBackgroundFrame } from "./FloralBackgroundFrame";
 
-export function ValimaEvent() {
+export function WalimaEvent() {
   const zaiPalaceMapsUrl =
     "https://www.google.com/maps/search/?api=1&query=Zai+Palace,+514/141,+Surya+Narayana+Chetty+Street,+Royapuram,+Chennai+-+600013";
 
   return (
     <SectionContainer
-      id="valima-event"
+      id="walima-event"
       className="bg-gradient-to-b from-[#E6DDE3] to-[#E6C9CE] min-h-[90vh] flex flex-col justify-center py-10 relative overflow-hidden"
     >
       <FloralBackgroundFrame />

@@ -32,12 +32,36 @@ export function WeddingHero({
 }: WeddingHeroProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
+  const containerRef = useRef<HTMLElement>(null);
+
   React.useEffect(() => {
-    if (!videoRef.current) return;
+    const video = videoRef.current;
+    const container = containerRef.current;
+    if (!video || !container) return;
+
     if (isActive) {
-      videoRef.current.play().catch(() => {});
+      // Use IntersectionObserver to pause the video when it's out of viewport
+      // This prevents massive CPU/GPU usage and scroll freezes on mobile
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              video.play().catch(() => {});
+            } else {
+              video.pause();
+            }
+          });
+        },
+        { threshold: 0 } // Trigger as soon as 1px is out/in
+      );
+      
+      observer.observe(container);
+
+      return () => {
+        observer.disconnect();
+      };
     } else {
-      videoRef.current.pause();
+      video.pause();
     }
   }, [isActive]);
   const scrollToContent = () => {
@@ -54,6 +78,7 @@ export function WeddingHero({
 
   return (
     <section
+      ref={containerRef}
       className={cn(
         "relative w-full min-h-[100dvh] flex flex-col justify-between items-center text-center overflow-hidden select-none px-4 py-4 sm:py-6 bg-transparent opacity-100",
         className
@@ -237,7 +262,7 @@ export function WeddingHero({
         {/* Ceremony Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[rgba(20,10,18,0.65)] backdrop-blur-md border border-[#D8B86A]/30 shadow-lg mb-2">
           <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-[#D8B86A] font-bold">
-            Nikkah &amp; Valima
+            Nikah &amp; Walima
           </span>
         </div>
 

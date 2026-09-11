@@ -33,18 +33,18 @@ export const weddingData = {
     dayOfWeek: "Sunday",
   },
   ceremonies: {
-    nikkah: {
+    nikah: {
       name: "NIKKAH",
-      title: "Nikkah Ceremony",
+      title: "Nikah Ceremony",
       time: "11:00 A.M.",
       venueName: "EDGAH MOSQUE",
       address: "38, 238, Angappa Naicken St, Seethakadi Nagar, George Town, Chennai, Tamil Nadu 600001",
       mapsUrl:
         "https://maps.app.goo.gl/6pWaCgnRazAFwRb86",
     },
-    valima: {
+    walima: {
       name: "VALIMA",
-      title: "Valima Reception",
+      title: "Walima Reception",
       time: "LUNCH AFTER 12:30 P.M.",
       timeFormatted: "12:30 P.M. onwards",
       venueName: "ZAI PALACE",
@@ -66,7 +66,7 @@ export const weddingData = {
     // Configurable WhatsApp contact number (e.g. +91 98400 00000)
     whatsappNumber: "919840000000",
     joinUsMessage:
-      "Assalamu Alaikum,\nI would be delighted to attend the Nikkah & Valima of S. Mohamed Dil Nawaz & A. Sharmila Begum on Sunday, 18 October 2026.",
+      "Assalamu Alaikum,\nI would be delighted to attend the Nikah & Walima of S. Mohamed Dil Nawaz & A. Sharmila Begum on Sunday, 18 October 2026.",
     cantAttendMessage:
       "Assalamu Alaikum,\nThank you for the warm invitation. Unfortunately, I won't be able to attend the wedding of S. Mohamed Dil Nawaz & A. Sharmila Begum on Sunday, 18 October 2026. Wishing the couple a lifetime of love and blessings.",
   },

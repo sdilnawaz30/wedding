@@ -8,13 +8,13 @@ import { SectionTitle } from "./SectionTitle";
 import { FloralCorner, FloralGarland } from "./FloralDecorations";
 import { FloralBackgroundFrame } from "./FloralBackgroundFrame";
 
-export function NikkahEvent() {
+export function NikahEvent() {
   const googleMapsUrl =
     "https://maps.app.goo.gl/6pWaCgnRazAFwRb86";
 
   return (
     <SectionContainer
-      id="nikkah-event"
+      id="nikah-event"
       className="bg-gradient-to-b from-[#E6C9CE] to-[#E6DDE3] min-h-[90vh] flex flex-col justify-center py-10 relative overflow-hidden"
     >
       <FloralBackgroundFrame />
@@ -62,7 +62,7 @@ export function NikkahEvent() {
                 11:00 A.M.
               </p>
               <p className="font-serif italic text-xs text-[#3B3336] mt-0.5 font-medium">
-                Valima Reception Follows (Lunch after 12:30 PM)
+                Walima Reception Follows (Lunch after 12:30 PM)
               </p>
             </div>
           </div>
@@ -74,7 +74,7 @@ export function NikkahEvent() {
             </div>
             <div>
               <span className="font-sans text-[9px] uppercase tracking-[0.2em] text-[#B76E79] font-bold block">
-                Nikkah Venue
+                Nikah Venue
               </span>
               <p className="font-serif font-bold text-base sm:text-lg text-[#2B2528] leading-snug">
                 EDGAH MOSQUE

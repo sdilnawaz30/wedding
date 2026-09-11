@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
-import { motion, useScroll, useSpring } from "framer-motion";
+import React from "react";
 import {
   Calendar,
   Clock,
@@ -14,20 +13,6 @@ import { weddingData } from "@/lib/weddingData";
 import { FloralCorner, FloralGarland, FloralFlourish } from "./FloralDecorations";
 
 export function WeddingTimeline() {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  // Progressive scroll-linked drawing of the vertical connecting line
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start 75%", "end 75%"],
-  });
-
-  const scaleY = useSpring(scrollYProgress, {
-    stiffness: 90,
-    damping: 24,
-    restDelta: 0.001,
-  });
-
   return (
     <SectionContainer
       id="wedding-timeline"
@@ -35,7 +20,6 @@ export function WeddingTimeline() {
     >
       {/* FLOATING TIMELINE CONTENT: No solid white card */}
       <div
-        ref={containerRef}
         className="w-full max-w-[390px] flex flex-col items-center text-center relative"
       >
         {/* Top Header */}
@@ -115,10 +99,10 @@ export function WeddingTimeline() {
                 <MapPin className="w-3.5 h-3.5 text-[#D8B86A] shrink-0 mt-0.5" />
                 <div>
                   <p className="font-serif font-bold text-xs text-[#FFF7EA] text-shadow-light">
-                    {weddingData.ceremonies.nikkah.venueName}
+                    {weddingData.ceremonies.nikah.venueName}
                   </p>
                   <p className="font-sans text-[11px] text-[#F0DEC8]">
-                    {weddingData.ceremonies.nikkah.address}
+                    {weddingData.ceremonies.nikah.address}
                   </p>
                 </div>
               </div>
@@ -149,10 +133,10 @@ export function WeddingTimeline() {
                 <MapPin className="w-3.5 h-3.5 text-[#D8B86A] shrink-0 mt-0.5" />
                 <div>
                   <p className="font-serif font-bold text-xs text-[#FFF7EA] text-shadow-light">
-                    {weddingData.ceremonies.valima.venueName}
+                    {weddingData.ceremonies.walima.venueName}
                   </p>
                   <p className="font-sans text-[11px] text-[#F0DEC8]">
-                    {weddingData.ceremonies.valima.address}
+                    {weddingData.ceremonies.walima.address}
                   </p>
                 </div>
               </div>

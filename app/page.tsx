@@ -6,8 +6,8 @@ import { WeddingHero } from "@/components/WeddingHero";
 import { IslamicBlessing } from "@/components/IslamicBlessing";
 import { HeartScratchDate } from "@/components/HeartScratchDate";
 import { FamilyInvitation } from "@/components/FamilyInvitation";
-import { NikkahEvent } from "@/components/NikkahEvent";
-import { ValimaEvent } from "@/components/ValimaEvent";
+import { NikahEvent } from "@/components/NikahEvent";
+import { WalimaEvent } from "@/components/WalimaEvent";
 import { WeddingRSVP } from "@/components/WeddingRSVP";
 import { EnvelopeIntro } from "@/components/EnvelopeIntro";
 import { CinematicIntro } from "@/components/CinematicIntro";
@@ -73,7 +73,7 @@ export default function Home() {
           brideDegree={weddingData.couple.bride.degree}
           brideRole={weddingData.couple.bride.profession}
           weddingDate={weddingDate}
-          ceremonyTime={weddingData.ceremonies.nikkah.time}
+          ceremonyTime={weddingData.ceremonies.nikah.time}
         />
 
         {/* Dedicated Islamic Blessing & Quran Verse Section */}
@@ -85,11 +85,11 @@ export default function Home() {
         {/* Formal Family Invitation & Lineage Section */}
         <FamilyInvitation />
 
-        {/* Sacred Nikkah Ceremony & Venue Directions Section */}
-        <NikkahEvent />
+        {/* Sacred Nikah Ceremony & Venue Directions Section */}
+        <NikahEvent />
 
-        {/* Valima Reception at Zai Palace & Bus Route Section */}
-        <ValimaEvent />
+        {/* Walima Reception at Zai Palace & Bus Route Section */}
+        <WalimaEvent />
 
         {/* Zero-Backend WhatsApp RSVP Section */}
         <WeddingRSVP />

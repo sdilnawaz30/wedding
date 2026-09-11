@@ -64,7 +64,7 @@ export function WeddingRSVP() {
         {/* Islamic Ending Flourish */}
         <div className="w-full pt-4 mt-6 border-t border-[#D8B86A]/20 flex flex-col items-center justify-center">
           <span className="font-serif italic text-xs text-[#D8B86A] font-bold tracking-wider">
-            Insha allah
+            InshaAllah
           </span>
         </div>
       </div>
