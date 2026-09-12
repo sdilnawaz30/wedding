@@ -380,7 +380,7 @@ export function HeartScratchDate() {
           <div className="flex items-center justify-center gap-3">
             <div className="h-[1px] w-8 bg-gradient-to-r from-transparent to-[#C9A34E]/50" />
             <p className="font-serif italic text-sm text-[#3B3336] font-medium tracking-wide text-shadow-light">
-              Rub the card below to unveil our special day
+              Scratch to reveal our special day
             </p>
             <div className="h-[1px] w-8 bg-gradient-to-l from-transparent to-[#C9A34E]/50" />
           </div>
@@ -472,7 +472,7 @@ export function HeartScratchDate() {
                   18.10.2026
                 </h3>
                 <p className="font-serif italic text-xs sm:text-sm text-[#3B3336] font-medium text-shadow-light">
-                  Sunday, October Eighteenth
+                  Sunday, 18 October 2026
                 </p>
               </div>
             </div>
@@ -537,7 +537,7 @@ export function HeartScratchDate() {
               <span className="font-sans text-[11px] text-[#2B2528] font-semibold tracking-wider">
                 {scratchPercent > 0
                   ? `Keep revealing... ${scratchPercent}% / 75%`
-                  : "Rub to reveal (75% required)"}
+                  : "(Reveal 75% to continue)"}
               </span>
 
               {scratchPercent >= 50 && (

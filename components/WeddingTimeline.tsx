@@ -121,12 +121,12 @@ export function WeddingTimeline() {
               <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#182942] text-[#FFF7EA] border border-[#D8B86A] shadow-xs mb-1">
                 <Clock className="w-3 h-3 text-[#D8B86A]" />
                 <span className="font-sans text-[10.5px] uppercase font-bold tracking-wider text-[#FFF7EA]">
-                  12:30 P.M. onwards
+                  12:30 PM onwards
                 </span>
               </div>
 
               <h3 className="font-serif font-bold text-lg sm:text-xl text-[#FFF4E6] leading-snug text-shadow-light">
-                VALIMA LUNCH
+                WALIMA LUNCH
               </h3>
 
               <div className="mt-1 flex items-start gap-1.5 text-xs text-[#F0DEC8] leading-relaxed">

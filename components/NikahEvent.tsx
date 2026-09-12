@@ -59,10 +59,10 @@ export function NikahEvent() {
                 Auspicious Time
               </span>
               <p className="font-serif font-bold text-base sm:text-lg text-[#2B2528] leading-snug">
-                11:00 A.M.
+                11:00 AM
               </p>
               <p className="font-serif italic text-xs text-[#3B3336] mt-0.5 font-medium">
-                Walima Reception Follows (Lunch after 12:30 PM)
+                Walima Reception to follow (Lunch from 12:30 PM onwards)
               </p>
             </div>
           </div>
@@ -74,7 +74,7 @@ export function NikahEvent() {
             </div>
             <div>
               <span className="font-sans text-[9px] uppercase tracking-[0.2em] text-[#B76E79] font-bold block">
-                Nikah Venue
+                Nikkah Venue
               </span>
               <p className="font-serif font-bold text-base sm:text-lg text-[#2B2528] leading-snug">
                 EDGAH MOSQUE

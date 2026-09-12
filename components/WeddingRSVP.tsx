@@ -57,7 +57,7 @@ export function WeddingRSVP() {
                 className="group relative w-full py-4 px-6 rounded-xl bg-gradient-to-r from-[rgba(216,184,106,0.8)] to-[rgba(180,140,80,0.8)] text-[#140C12] font-sans font-bold text-[13px] uppercase tracking-[0.24em] transition-all duration-300 shadow-md border border-[#D8B86A]/60 hover:from-[rgba(216,184,106,1)] hover:to-[rgba(180,140,80,1)] hover:shadow-[0_0_15px_rgba(216,184,106,0.5)] flex items-center justify-center gap-3 cursor-pointer active:scale-95"
               >
                 <CheckCircle className="w-5 h-5 text-[#140C12] transition-transform group-hover:scale-110" />
-                <span>MARK MY ATTENDANCE</span>
+                <span>CONFIRM YOUR ATTENDANCE</span>
               </a>
             </div>
 

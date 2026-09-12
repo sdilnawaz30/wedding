@@ -33,7 +33,7 @@ export function WalimaEvent() {
       <div className="w-full max-w-[390px] flex flex-col items-center text-center relative">
         {/* Consistent SectionTitle ornamental frame */}
         <SectionTitle
-          title="VALIMA RECEPTION"
+          title="WALIMA RECEPTION"
           subtitle="AT ZAI PALACE • ROYAPURAM"
         />
 
@@ -67,7 +67,7 @@ export function WalimaEvent() {
                 Arrival Time
               </span>
               <p className="font-serif font-bold text-base sm:text-lg text-[#2B2528] leading-snug">
-                12:30 P.M. onwards
+                12:30 PM onwards
               </p>
               <p className="font-serif italic text-xs text-[#3B3336] mt-0.5 font-medium">
                 Lunch will be served
@@ -82,7 +82,7 @@ export function WalimaEvent() {
             </div>
             <div>
               <span className="font-sans text-[9px] uppercase tracking-[0.2em] text-[#B76E79] font-bold block">
-                VALIMA VENUE
+                WALIMA VENUE
               </span>
               <p className="font-serif font-bold text-base sm:text-lg text-[#2B2528] leading-snug">
                 ZAI PALACE
@@ -177,10 +177,10 @@ export function WalimaEvent() {
           <div className="grid grid-cols-2 gap-2.5 mt-2 text-left relative">
             <div className="p-2.5 rounded-xl bg-white/60 border border-[#B76E79]/30">
               <span className="block font-sans text-[8.5px] uppercase tracking-wider text-[#B76E79] font-bold mb-0.5">
-                BUS ROUTE
+                Bus Routes:
               </span>
               <p className="font-serif font-bold text-xs text-[#2B2528] leading-snug">
-                1, 4, 56D, 56C, 56K & 101
+                1, 4, 56D, 56C, 56K, 101
               </p>
             </div>
 

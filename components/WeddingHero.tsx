@@ -20,10 +20,10 @@ interface WeddingHeroProps {
 
 export function WeddingHero({
   groomName = "S. Mohamed Dil Nawaz",
-  groomDegree = "B.E",
+  groomDegree = "B.E.",
   groomRole = "Network Engineer",
   brideName = "A. Sharmila begum",
-  brideDegree = "M.Sc",
+  brideDegree = "M.Sc.",
   brideRole = "Professor",
   weddingDate = "Sunday, 18 October 2026",
   videoSrc = "/videos/bg video.mp4",
@@ -123,7 +123,7 @@ export function WeddingHero({
       <div className="relative z-20 w-full max-w-[390px] mx-auto flex flex-col items-center text-center my-auto py-1 opacity-100">
         {/* Welcome Announcement */}
         <p className="font-serif italic text-sm sm:text-base text-[#FFF7EA] tracking-wide text-shadow-light max-w-[300px] leading-relaxed">
-          We are honoured to welcome you to
+          We are honoured to invite you to the sacred Nikkah of
           <br />
           the Wedding ceremony of
         </p>
@@ -262,7 +262,7 @@ export function WeddingHero({
         {/* Ceremony Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[rgba(20,10,18,0.65)] backdrop-blur-md border border-[#D8B86A]/30 shadow-lg mb-2">
           <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-[#D8B86A] font-bold">
-            Nikah &amp; Walima
+            Nikkah &amp; Walima
           </span>
         </div>
 

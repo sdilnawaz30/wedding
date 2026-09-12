@@ -227,7 +227,7 @@ export function WeddingCalendar() {
           </div>
 
           <h3 className="font-serif font-bold text-xl sm:text-2xl text-[#0D3B2E] tracking-wider">
-            VALIMA
+            WALIMA
           </h3>
 
           <p className="font-serif italic text-sm text-[#0D3B2E] font-medium tracking-wide mt-0.5">
@@ -235,7 +235,7 @@ export function WeddingCalendar() {
           </p>
 
           <p className="font-sans text-[10px] uppercase tracking-[0.18em] text-[#3D5A4F] font-semibold mt-1">
-            Sunday, 18 October 2026 • Lunch after 12:30 P.M.
+            Sunday, 18 October 2026 • Lunch from 12:30 PM onwards
           </p>
         </motion.div>
       </div>

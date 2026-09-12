@@ -35,7 +35,7 @@ export function FamilyInvitation() {
               Bismillah
             </span>
             <p className="font-serif italic text-base sm:text-lg text-[#3B3336] leading-relaxed max-w-[310px] mx-auto text-shadow-light font-medium">
-              &ldquo;With the blessings of Allah and our beloved parents, we joyfully invite you to the wedding of our children.&rdquo;
+              &ldquo;With the blessings of Allah (SWT) and our beloved parents, we joyfully invite you to the wedding of our children.&rdquo;
             </p>
           </div>
 
