@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
-import { Volume2, VolumeX, Sparkles, RotateCcw, Heart } from "lucide-react";
+import { Volume2, VolumeX, Sparkles, RotateCcw, Heart, Home } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { FloralWreathRing, FloralGarland, FloralCorner } from "./FloralDecorations";
 import { SectionTitle } from "./SectionTitle";
@@ -120,9 +120,15 @@ export function PageContainer({
           </p>
 
           {/* Agency Credit */}
-          <p className="font-sans text-[8.5px] uppercase tracking-[0.2em] text-[#D8B86A]/60 mt-8 pb-1">
-            Designed by <a href="https://wisdotech.in" target="_blank" rel="noopener noreferrer" className="hover:text-[#D8B86A] transition-colors underline decoration-[#D8B86A]/30 hover:decoration-[#D8B86A] underline-offset-4">Wisdotech</a>
-          </p>
+          <div className="flex flex-col items-center justify-center gap-2.5 mt-8 pb-2">
+            <p className="font-sans text-[8.5px] uppercase tracking-[0.2em] text-[#D8B86A]/60">
+              Designed by <a href="https://wisdotech.in" target="_blank" rel="noopener noreferrer" className="hover:text-[#D8B86A] transition-colors underline decoration-[#D8B86A]/30 hover:decoration-[#D8B86A] underline-offset-4">Wisdotech</a>
+            </p>
+            <a href="https://inzfyer.in" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 font-sans text-[8.5px] uppercase tracking-[0.2em] text-[#D8B86A]/60 hover:text-[#D8B86A] transition-colors">
+              <Home className="w-3 h-3" />
+              <span className="underline decoration-[#D8B86A]/30 hover:decoration-[#D8B86A] underline-offset-4">Inzfyer</span>
+            </a>
+          </div>
         </footer>
       </div>
     </div>

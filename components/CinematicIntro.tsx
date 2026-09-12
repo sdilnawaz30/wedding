@@ -15,7 +15,7 @@ export function CinematicIntro({ onComplete, onTransitionStart }: CinematicIntro
   const transitionTriggered = useRef(false);
 
   // Time in milliseconds when the bright flash occurs in the video
-  const PLAYBACK_RATE = 1.35;
+  const PLAYBACK_RATE = 1.6;
   const FLASH_TIME_MS = 6000 / PLAYBACK_RATE; 
 
   // Lock body scroll while the intro is active & Clean up video memory on unmount
