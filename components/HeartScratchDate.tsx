@@ -362,7 +362,7 @@ export function HeartScratchDate() {
 
       {/* Reusable SectionTitle Ornamental Frame */}
       <SectionTitle
-        title="SAVE THE DATE"
+        title="SCRATCH TO UNVEIL"
       />
 
       {/* FULL FLORAL FRAMED COMPOSITION WITH HEART SHAPE */}
