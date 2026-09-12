@@ -96,7 +96,7 @@ export function WeddingHero({
         muted
         playsInline
         loop
-        preload="auto"
+        preload="metadata"
         className="absolute inset-0 w-full h-full object-cover object-center z-0 pointer-events-none"
       />
 
