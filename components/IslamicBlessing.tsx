@@ -27,20 +27,17 @@ export function IslamicBlessing() {
 
         {/* FAMILY INVITATION MESSAGE */}
         <div className="text-center mb-6 mt-2">
-          <p className="font-serif italic text-sm sm:text-base text-[#3B3336] leading-relaxed max-w-[310px] mx-auto text-shadow-light font-medium mb-3">
-            &ldquo;We warmly invite you to attend and celebrate this blessed occasion with your family.&rdquo;
-          </p>
           <p className="font-serif text-sm sm:text-base text-[#2B2528] font-bold tracking-wide text-shadow-light max-w-[310px] mx-auto">
-            &ldquo;Please join us with your family and grace the occasion with your presence.&rdquo;
+            &ldquo;With the blessings of Allah, we invite you to join us on the blessed occasion of our Nikkah and grace it with your presence.&rdquo;
           </p>
         </div>
 
         {/* Handcrafted Floral Garland Divider */}
         <FloralGarland width={200} className="my-2" />
 
-        {/* WEDDING DUA */}
+        {/* NIKKAH DUA */}
         <SectionTitle
-          title="WEDDING DUA"
+          title="NIKKAH DUA"
         />
 
         <div className="my-1 w-full bg-[#FFF9FB]/60 backdrop-blur-[2px] shadow-[0_4px_15px_rgba(183,110,121,0.08)] rounded-2xl p-4 sm:p-5 text-center opacity-100 border border-[#B76E79]/20">

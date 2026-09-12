@@ -465,9 +465,6 @@ export function HeartScratchDate() {
                 <p className="font-serif font-bold text-[#2B2528] text-[13px] tracking-wide mb-1 drop-shadow-sm">
                   {weddingData.date.hijri}
                 </p>
-                <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.24em] text-[#B76E79] font-bold text-shadow-light">
-                  SCRATCH TO UNVEIL
-                </span>
                 <h3 className="font-serif font-bold text-2xl sm:text-3xl text-[#2B2528] tracking-wider leading-none text-shadow-light my-1">
                   18 October 2026
                 </h3>

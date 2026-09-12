@@ -26,7 +26,7 @@ export const weddingData = {
   date: {
     gregorian: "Sunday, 18 October 2026",
     gregorianFormatted: "SUNDAY, 18 OCTOBER 2026",
-    hijri: "7 Jumada Al-Awwal 1448 AH",
+    hijri: "6 Jumada Al-Awwal 1448 AH",
     year: 2026,
     month: "October",
     day: 18,
