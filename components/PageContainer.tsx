@@ -105,13 +105,9 @@ export function PageContainer({
           </div>
 
           <SectionTitle
-            title="FINAL BLESSING"
-            subtitle="WITH DUAS & BLESSINGS"
+            title="NIKKAH & WALIMA RECEPTION"
+            subtitle="WITH DUAS & BARAKAH"
           />
-
-          <p className="font-serif italic text-sm text-[#FFF4E6] font-bold tracking-wide text-shadow-light mt-1">
-            With duas, love and blessings
-          </p>
 
           <FloralGarland width={160} className="my-1.5" />
 
