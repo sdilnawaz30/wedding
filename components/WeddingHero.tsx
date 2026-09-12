@@ -52,7 +52,10 @@ export function WeddingHero({
             }
           });
         },
-        { threshold: 0 } // Trigger as soon as 1px is out/in
+        { 
+          threshold: 0,
+          rootMargin: "300px" // Keep playing until 300px outside viewport to avoid scroll hitch at exact handoff
+        }
       );
       
       observer.observe(container);
