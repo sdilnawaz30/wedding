@@ -52,7 +52,7 @@ export function WalimaEvent() {
                 Sunday, 18th October 2026
               </p>
               <p className="font-serif italic text-xs text-[#3B3336] mt-0.5 font-semibold">
-                7 Jumada Al-Awwal 1448 AH
+                6 Jumada Al-Awwal 1448 AH
               </p>
             </div>
           </div>

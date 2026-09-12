@@ -134,7 +134,7 @@ export function FoundationShowcase() {
             </div>
             <div>
               <p className="font-sans text-[10px] uppercase tracking-wider text-[#A68028] font-bold">
-                Date • 7 Jumada Al-Awwal 1448 AH
+                Date • 6 Jumada Al-Awwal 1448 AH
               </p>
               <p className="font-serif font-bold text-base text-[#0D3B2E]">
                 Sunday, 18th October 2026
