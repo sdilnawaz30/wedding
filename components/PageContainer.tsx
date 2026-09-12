@@ -63,7 +63,7 @@ export function PageContainer({
       {/* Hidden audio element */}
       <audio
         ref={audioRef}
-        src="/music/wedding-theme.mp3"
+        src="https://wedding-nine-flax-69.vercel.app/music/wedding-theme.mp3"
         loop
         preload="auto"
         className="hidden"

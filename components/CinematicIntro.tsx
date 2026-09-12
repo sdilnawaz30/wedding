@@ -94,7 +94,7 @@ export function CinematicIntro({ onComplete, onTransitionStart }: CinematicIntro
     >
       <video
         ref={videoRef}
-        src="/videos/intro scene.mp4"
+        src="https://wedding-nine-flax-69.vercel.app/videos/intro scene.mp4"
         muted
         playsInline
         preload="auto"

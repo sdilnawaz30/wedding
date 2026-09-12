@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  assetPrefix: "https://wedding-nine-flax-69.vercel.app",
 };
 
 export default nextConfig;

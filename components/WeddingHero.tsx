@@ -26,7 +26,7 @@ export function WeddingHero({
   brideDegree = "M.Sc.",
   brideRole = "Professor",
   weddingDate = "Sunday, 18 October 2026",
-  videoSrc = "/videos/bg video.mp4",
+  videoSrc = "https://wedding-nine-flax-69.vercel.app/videos/bg video.mp4",
   isActive = true,
   className,
 }: WeddingHeroProps) {
