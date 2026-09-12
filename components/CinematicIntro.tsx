@@ -56,6 +56,18 @@ export function CinematicIntro({ onComplete, onTransitionStart }: CinematicIntro
     }, 1200);
   }, [onComplete, onTransitionStart]);
 
+  // Periodically check if video is ready just in case events fail
+  useEffect(() => {
+    if (isVideoReady || !videoRef.current) return;
+    const interval = setInterval(() => {
+      if (videoRef.current && videoRef.current.readyState >= 2) {
+        setIsVideoReady(true);
+        clearInterval(interval);
+      }
+    }, 200);
+    return () => clearInterval(interval);
+  }, [isVideoReady]);
+
   const handleTap = useCallback((e?: React.SyntheticEvent) => {
     if (e) {
       e.preventDefault(); 
@@ -65,34 +77,52 @@ export function CinematicIntro({ onComplete, onTransitionStart }: CinematicIntro
     if (hasTapped || transitionTriggered.current) return;
     setHasTapped(true);
     
-    // If video isn't ready or we don't have a ref, immediately fall back.
-    if (!videoRef.current || !isVideoReady) {
+    const video = videoRef.current;
+
+    // If we don't have a ref, immediately fall back.
+    if (!video) {
       triggerTransition();
       return;
     }
 
     // Try to play the video.
-    videoRef.current.playbackRate = PLAYBACK_RATE;
-    const playPromise = videoRef.current.play();
+    video.playbackRate = PLAYBACK_RATE;
+    const playPromise = video.play();
     
+    let isFallbackTriggered = false;
+    const executeTransition = () => {
+      if (isFallbackTriggered) return;
+      isFallbackTriggered = true;
+      triggerTransition();
+    };
+
+    // Give the video a brief controlled opportunity to start (800ms)
+    const timeoutId = setTimeout(() => {
+      if (!isFallbackTriggered && video.readyState < 2) {
+        console.log("Video not ready after tap, using fallback.");
+        executeTransition();
+      }
+    }, 800);
+
     if (playPromise !== undefined) {
       playPromise.then(() => {
-        // Video is playing! Schedule the flash transition at the right time.
-        setTimeout(() => {
-          triggerTransition();
-        }, FLASH_TIME_MS);
+        // Video successfully started playing!
+        if (!isFallbackTriggered) {
+          setTimeout(() => {
+            executeTransition();
+          }, FLASH_TIME_MS);
+        }
       }).catch((err) => {
         console.log("Video play failed (mobile restriction/network):", err);
-        // Fallback: gracefully trigger transition immediately
-        triggerTransition();
+        clearTimeout(timeoutId);
+        executeTransition();
       });
     } else {
-      // Very old browser fallback
       setTimeout(() => {
-        triggerTransition();
+        executeTransition();
       }, FLASH_TIME_MS);
     }
-  }, [hasTapped, isVideoReady, triggerTransition, FLASH_TIME_MS]);
+  }, [hasTapped, triggerTransition, FLASH_TIME_MS]);
 
   // 5-second automatic fallback timeout if user does not tap
   // If the video hangs or user does nothing, this ensures they are never trapped.
