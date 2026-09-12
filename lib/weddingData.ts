@@ -42,9 +42,9 @@ export const weddingData = {
       mapsUrl:
         "https://maps.app.goo.gl/6pWaCgnRazAFwRb86",
     },
-    walima: {
-      name: "WALIMA",
-      title: "Walima Reception",
+    valima: {
+      name: "VALIMA",
+      title: "Valima Reception",
       time: "LUNCH FROM 12:30 PM ONWARDS",
       timeFormatted: "12:30 PM onwards",
       venueName: "ZAI PALACE",
@@ -66,7 +66,7 @@ export const weddingData = {
     // Configurable WhatsApp contact number (e.g. +91 98400 00000)
     whatsappNumber: "919840000000",
     joinUsMessage:
-      "Assalamu Alaikum,\nI would be delighted to attend the Nikkah & Walima of S. Mohamed Dil Nawaz & A. Sharmila Begum on Sunday, 18 October 2026.",
+      "Assalamu Alaikum,\nI would be delighted to attend the Nikkah & Valima of S. Mohamed Dil Nawaz & A. Sharmila Begum on Sunday, 18 October 2026.",
     cantAttendMessage:
       "Assalamu Alaikum,\nThank you for the warm invitation. Unfortunately, I won't be able to attend the wedding of S. Mohamed Dil Nawaz & A. Sharmila Begum on Sunday, 18 October 2026. Wishing the couple a lifetime of love and blessings.",
   },

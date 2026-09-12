@@ -16,13 +16,13 @@ import { SectionTitle } from "./SectionTitle";
 import { FloralCorner, FloralGarland, FloralFlourish } from "./FloralDecorations";
 import { FloralBackgroundFrame } from "./FloralBackgroundFrame";
 
-export function WalimaEvent() {
+export function ValimaEvent() {
   const zaiPalaceMapsUrl =
     "https://www.google.com/maps/search/?api=1&query=Zai+Palace,+514/141,+Surya+Narayana+Chetty+Street,+Royapuram,+Chennai+-+600013";
 
   return (
     <SectionContainer
-      id="walima-event"
+      id="valima-event"
       className="bg-gradient-to-b from-[#E6DDE3] to-[#E6C9CE] min-h-[90vh] flex flex-col justify-center py-10 relative overflow-hidden"
     >
       <FloralBackgroundFrame />
@@ -33,7 +33,7 @@ export function WalimaEvent() {
       <div className="w-full max-w-[390px] flex flex-col items-center text-center relative">
         {/* Consistent SectionTitle ornamental frame */}
         <SectionTitle
-          title="WALIMA RECEPTION"
+          title="VALIMA RECEPTION"
           subtitle="AT ZAI PALACE • ROYAPURAM"
         />
 
@@ -82,7 +82,7 @@ export function WalimaEvent() {
             </div>
             <div>
               <span className="font-sans text-[9px] uppercase tracking-[0.2em] text-[#B76E79] font-bold block">
-                WALIMA VENUE
+                VALIMA VENUE
               </span>
               <p className="font-serif font-bold text-base sm:text-lg text-[#2B2528] leading-snug">
                 ZAI PALACE

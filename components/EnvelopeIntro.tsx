@@ -300,7 +300,7 @@ export function EnvelopeIntro({
               </p>
 
               <span className="font-sans text-[7.5px] uppercase tracking-[0.26em] text-[#9C7328] font-bold mt-0.5">
-                Nikkah & Walima
+                Nikkah & Valima
               </span>
 
               {/* Real Couple Names */}

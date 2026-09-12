@@ -265,7 +265,7 @@ export function WeddingHero({
         {/* Ceremony Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[rgba(20,10,18,0.65)] backdrop-blur-md border border-[#D8B86A]/30 shadow-lg mb-2">
           <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-[#D8B86A] font-bold">
-            Nikkah &amp; Walima
+            Nikkah &amp; Valima
           </span>
         </div>
 

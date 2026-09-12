@@ -7,7 +7,7 @@ import { IslamicBlessing } from "@/components/IslamicBlessing";
 import { HeartScratchDate } from "@/components/HeartScratchDate";
 import { FamilyInvitation } from "@/components/FamilyInvitation";
 import { NikahEvent } from "@/components/NikahEvent";
-import { WalimaEvent } from "@/components/WalimaEvent";
+import { ValimaEvent } from "@/components/ValimaEvent";
 import { WeddingRSVP } from "@/components/WeddingRSVP";
 import { EnvelopeIntro } from "@/components/EnvelopeIntro";
 import { CinematicIntro } from "@/components/CinematicIntro";
@@ -88,8 +88,8 @@ export default function Home() {
         {/* Sacred Nikah Ceremony & Venue Directions Section */}
         <NikahEvent />
 
-        {/* Walima Reception at Zai Palace & Bus Route Section */}
-        <WalimaEvent />
+        {/* Valima Reception at Zai Palace & Bus Route Section */}
+        <ValimaEvent />
 
         {/* Zero-Backend WhatsApp RSVP Section */}
         <WeddingRSVP />

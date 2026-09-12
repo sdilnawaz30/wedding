@@ -105,7 +105,7 @@ export function PageContainer({
           </div>
 
           <SectionTitle
-            title="NIKKAH & WALIMA RECEPTION"
+            title="NIKKAH & VALIMA RECEPTION"
             subtitle="WITH DUAS & BARAKAH"
           />
 

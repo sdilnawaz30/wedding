@@ -62,7 +62,7 @@ export function NikahEvent() {
                 11:00 AM
               </p>
               <p className="font-serif italic text-xs text-[#3B3336] mt-0.5 font-medium">
-                Walima Reception to follow (Lunch from 12:30 PM onwards)
+                Valima Reception to follow (Lunch from 12:30 PM onwards)
               </p>
             </div>
           </div>

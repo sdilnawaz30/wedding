@@ -126,17 +126,17 @@ export function WeddingTimeline() {
               </div>
 
               <h3 className="font-serif font-bold text-lg sm:text-xl text-[#FFF4E6] leading-snug text-shadow-light">
-                WALIMA LUNCH
+                VALIMA LUNCH
               </h3>
 
               <div className="mt-1 flex items-start gap-1.5 text-xs text-[#F0DEC8] leading-relaxed">
                 <MapPin className="w-3.5 h-3.5 text-[#D8B86A] shrink-0 mt-0.5" />
                 <div>
                   <p className="font-serif font-bold text-xs text-[#FFF7EA] text-shadow-light">
-                    {weddingData.ceremonies.walima.venueName}
+                    {weddingData.ceremonies.valima.venueName}
                   </p>
                   <p className="font-sans text-[11px] text-[#F0DEC8]">
-                    {weddingData.ceremonies.walima.address}
+                    {weddingData.ceremonies.valima.address}
                   </p>
                 </div>
               </div>

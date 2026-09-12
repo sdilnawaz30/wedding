@@ -43,11 +43,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Wedding Invitation | S. Mohamed Dil Nawaz & A. Sharmila Begum",
   description:
-    "With the blessings of Allah (SWT), cordially inviting you to honour us with your gracious presence at the Nikkah & Walima celebration of S. Mohamed Dil Nawaz & A. Sharmila Begum on Sunday, 18 October 2026.",
+    "With the blessings of Allah (SWT), cordially inviting you to honour us with your gracious presence at the Nikkah & Valima celebration of S. Mohamed Dil Nawaz & A. Sharmila Begum on Sunday, 18 October 2026.",
   keywords: [
     "Wedding",
     "Nikkah",
-    "Walima",
+    "Valima",
     "Mohamed Dil Nawaz",
     "Sharmila Begum",
     "Wedding Invitation",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Wedding Invitation | S. Mohamed Dil Nawaz & A. Sharmila Begum",
     description:
-      "Cordially inviting you to honour us with your gracious presence at the Nikkah & Walima celebration of S. Mohamed Dil Nawaz & A. Sharmila Begum on Sunday, 18 October 2026.",
+      "Cordially inviting you to honour us with your gracious presence at the Nikkah & Valima celebration of S. Mohamed Dil Nawaz & A. Sharmila Begum on Sunday, 18 October 2026.",
     type: "website",
   },
 };

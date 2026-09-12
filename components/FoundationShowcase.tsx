@@ -157,7 +157,7 @@ export function FoundationShowcase() {
                 Nikkah: 11:00 AM
               </p>
               <p className="font-sans text-xs text-[#3D5A4F] mt-0.5">
-                Walima Reception to follow (Lunch from 12:30 PM onwards)
+                Valima Reception to follow (Lunch from 12:30 PM onwards)
               </p>
             </div>
           </div>
