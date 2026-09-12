@@ -55,7 +55,11 @@ export function FloralCorner({
         viewBox="0 0 100 100"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        style={{ filter: "drop-shadow(0px 2px 4px rgba(201, 163, 78, 0.2))" }}
+        style={{ 
+          filter: "drop-shadow(0px 2px 4px rgba(201, 163, 78, 0.2))",
+          transform: "translateZ(0)",
+          willChange: "transform, filter"
+        }}
       >
         <defs>
           <linearGradient id="foil" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">

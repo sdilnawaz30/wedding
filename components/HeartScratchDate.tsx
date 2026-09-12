@@ -286,7 +286,7 @@ export function HeartScratchDate() {
       {/* ----------------------------------------------------
           PREMIUM LUXURY BACKGROUND & WATERMARKS
           ---------------------------------------------------- */}
-      <div className="absolute inset-0 pointer-events-none z-0">
+      <div className="absolute inset-0 pointer-events-none z-0" style={{ transform: "translateZ(0)" }}>
         <div className="absolute inset-0 bg-gradient-to-br from-[#E6DDE3] via-[#E6C9CE] to-[#E6DDE3] opacity-60" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,253,248,0.6),transparent_60%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(183,110,121,0.15),transparent_60%)]" />
@@ -402,6 +402,8 @@ export function HeartScratchDate() {
             className="absolute inset-0 pointer-events-none z-30"
             style={{
               filter: "drop-shadow(0 8px 24px rgba(216, 184, 106, 0.45))",
+              transform: "translateZ(0)",
+              willChange: "transform",
             }}
           >
             <svg
@@ -434,12 +436,14 @@ export function HeartScratchDate() {
               touchAction: "none",
               clipPath: "url(#heartScratchClip)",
               WebkitClipPath: "url(#heartScratchClip)",
+              transform: "translateZ(0)",
+              willChange: "transform",
             }}
           >
             {/* ----------------------------------------------------
                 UNDERNEATH LAYER: REVEALED MARRIAGE DATE
                 ---------------------------------------------------- */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center pointer-events-auto bg-[#FFF9FB]/70 backdrop-blur-[2px]">
+            <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center pointer-events-auto bg-[#FFF9FB]/70">
               
               {/* Warm Champagne-Gold Light Sweep Overlay */}
               {showLightSweep && (
