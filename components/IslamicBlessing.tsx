@@ -113,8 +113,7 @@ export function IslamicBlessing() {
         {/* 3. QURANIC VERSE */}
         <div className="mt-2 relative z-10 w-full max-w-[350px] mx-auto text-center">
           <SectionTitle
-            title="QURAN VERSE"
-            subtitle="SURAH AR-RUM (30:21)"
+            title="SURAH AR-RUM (30:21)"
           />
 
           <p
