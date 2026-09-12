@@ -76,9 +76,7 @@ export function IslamicBlessing() {
               </span>
             </div>
 
-            <p className="font-serif italic text-sm sm:text-base text-[#2B2528] font-semibold tracking-wide text-shadow-light">
-              &ldquo;In the name of Allah, The Most Gracious, The Most Merciful&rdquo;
-            </p>
+
           </div>
         </div>
 
