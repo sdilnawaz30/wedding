@@ -160,7 +160,7 @@ export function WeddingHero({
             )}
           </h1>
           {groomRole && (
-            <p className="w-full text-center font-sans text-xs sm:text-[13px] text-[#E8D6B8] font-medium tracking-[0.2em] uppercase mt-1 text-shadow-light">
+            <p className="w-full text-center font-sans text-xs sm:text-[13px] text-[#E8D6B8] font-medium tracking-[0.2em] uppercase mt-1 [text-shadow:0_1px_2px_rgba(0,0,0,0.8),0_0_2px_rgba(0,0,0,0.8)] [-webkit-text-stroke:0.2px_rgba(0,0,0,0.4)]">
               {groomRole}
             </p>
           )}
@@ -207,7 +207,7 @@ export function WeddingHero({
             )}
           </h2>
           {brideRole && (
-            <p className="w-full text-center font-sans text-xs sm:text-[13px] text-[#E8D6B8] font-medium tracking-[0.2em] uppercase mt-1 text-shadow-light">
+            <p className="w-full text-center font-sans text-xs sm:text-[13px] text-[#E8D6B8] font-medium tracking-[0.2em] uppercase mt-1 [text-shadow:0_1px_2px_rgba(0,0,0,0.8),0_0_2px_rgba(0,0,0,0.8)] [-webkit-text-stroke:0.2px_rgba(0,0,0,0.4)]">
               {brideRole}
             </p>
           )}

@@ -62,23 +62,23 @@ export function EnvelopeIntro({
     // 2. Flap rotates backward in 3D around top edge
     setTimeout(() => {
       setPhase("opening-flap");
-    }, 220);
+    }, 200);
 
     // 3. Inner card emerges smoothly from inside the pocket
     setTimeout(() => {
       setPhase("card-rising");
-    }, 850);
+    }, 750);
 
     // 4. Card reaches final position; envelope slides/fades only AFTER
     setTimeout(() => {
       setPhase("card-expanding");
-    }, 2350);
+    }, 2100);
 
     // 5. Complete transition into the royal digital invitation
     setTimeout(() => {
       setPhase("revealed");
       onOpen?.();
-    }, 3250);
+    }, 2900);
   }, [phase, prefersReducedMotion, onOpen]);
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -109,7 +109,7 @@ export function EnvelopeIntro({
         initial={{ opacity: 1 }}
         animate={{ opacity: isCardExpanding ? 0 : 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 0.85, ease: [0.25, 1, 0.35, 1] }}
+        transition={{ duration: 0.75, ease: [0.25, 1, 0.35, 1] }}
         className="fixed inset-0 z-[100] flex flex-col items-center justify-center overflow-hidden select-none touch-none bg-black/25"
         role="dialog"
         aria-modal="true"
@@ -265,7 +265,7 @@ export function EnvelopeIntro({
                       scale: 1.01,
                       opacity: 1.0,
                       transition: {
-                        duration: 1.35,
+                        duration: 1.2,
                         ease: [0.22, 1, 0.36, 1],
                       },
                     }
@@ -274,7 +274,7 @@ export function EnvelopeIntro({
                       y: 0,
                       scale: 0.96,
                       opacity: 1.0,
-                      transition: { duration: 0.4 },
+                      transition: { duration: 0.35 },
                     }
                   : { y: 12, scale: 0.96, opacity: 0 }
               }
@@ -410,7 +410,7 @@ export function EnvelopeIntro({
                   ? {
                       rotateX: -180,
                       transition: {
-                        duration: 0.95,
+                        duration: 0.85,
                         ease: [0.25, 1, 0.35, 1],
                       },
                     }
@@ -538,32 +538,28 @@ export function EnvelopeIntro({
                     </span>
                   </div>
                 </div>
+
+                {/* CIRCULAR TAP TO OPEN TEXT */}
+                <motion.div 
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: phase === "closed" ? 1 : 0 }}
+                  transition={{ duration: 0.4 }}
+                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[100px] h-[100px] pointer-events-none"
+                >
+                  <svg viewBox="0 0 100 100" className="w-full h-full opacity-90">
+                    <path id="topArc" d="M 12 53 A 38 38 0 0 1 88 53" fill="none" />
+                    <text className="font-sans text-[7.5px] font-bold uppercase tracking-[0.25em] fill-[#FFF9FB]" style={{ filter: 'drop-shadow(0px 1px 2px rgba(0,0,0,0.8))' }}>
+                      <textPath href="#topArc" startOffset="50%" textAnchor="middle">
+                        TAP TO OPEN
+                      </textPath>
+                    </text>
+                  </svg>
+                </motion.div>
               </motion.div>
             </motion.div>
           </motion.div>
         </div>
 
-        {/* TAP TO OPEN PROMPT */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{
-            opacity: phase === "closed" ? 1 : 0,
-            y: phase === "closed" ? 0 : 10,
-          }}
-          transition={{ duration: 0.4 }}
-          className="mt-8 text-center z-10 cursor-pointer"
-          onClick={handleOpen}
-        >
-          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white border border-[#C59A3F]/60 shadow-xs hover:border-[#F3D785] transition-colors">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#D45B7D] animate-ping" />
-            <span className="font-sans text-[11px] uppercase tracking-[0.26em] text-[#D45B7D] font-bold">
-              Tap To Open
-            </span>
-          </div>
-          <p className="font-sans text-[10px] text-[#9C7328] tracking-wider mt-2">
-            Touch the royal wax seal to unfold your invitation
-          </p>
-        </motion.div>
       </motion.div>
     </AnimatePresence>
   );
