@@ -15,7 +15,7 @@ export function CinematicIntro({ onComplete, onTransitionStart }: CinematicIntro
   const transitionTriggered = useRef(false);
 
   // Time in milliseconds when the bright flash occurs in the video
-  const PLAYBACK_RATE = 1.25;
+  const PLAYBACK_RATE = 1.35;
   const FLASH_TIME_MS = 6000 / PLAYBACK_RATE; 
 
   // Lock body scroll while the intro is active & Clean up video memory on unmount
@@ -110,14 +110,15 @@ export function CinematicIntro({ onComplete, onTransitionStart }: CinematicIntro
             handleTap(e);
           }}
         >
-          <div className="flex flex-col items-center gap-2 opacity-90 hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-            <div className="px-5 py-2 rounded-full border border-white/20 bg-black/40 shadow-lg flex items-center gap-2 animate-pulse">
-              <span className="w-1.5 h-1.5 rounded-full bg-white/80" />
-              <span className="font-sans text-[11px] uppercase tracking-[0.3em] text-white/90 font-medium">
-                Tap to Open
-              </span>
-              <span className="w-1.5 h-1.5 rounded-full bg-white/80" />
-            </div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none w-[130px] h-[130px] opacity-90 transition-opacity duration-300">
+            <svg viewBox="0 0 100 100" className="w-full h-full">
+              <path id="topArc" d="M 10 54 A 40 40 0 0 1 90 54" fill="none" />
+              <text className="font-sans text-[7px] font-bold uppercase tracking-[0.3em] fill-[#FFF9FB]" style={{ filter: 'drop-shadow(0px 1px 3px rgba(0,0,0,0.8))' }}>
+                <textPath href="#topArc" startOffset="50%" textAnchor="middle">
+                  TAP TO OPEN
+                </textPath>
+              </text>
+            </svg>
           </div>
         </div>
       )}
