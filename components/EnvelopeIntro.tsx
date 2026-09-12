@@ -110,7 +110,7 @@ export function EnvelopeIntro({
         animate={{ opacity: isCardExpanding ? 0 : 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.75, ease: [0.25, 1, 0.35, 1] }}
-        className="fixed inset-0 z-[100] flex flex-col items-center justify-center overflow-hidden select-none touch-none bg-black/25"
+        className="fixed top-0 left-0 w-full h-[var(--scaled-vh,100vh)] z-[100] flex flex-col items-center justify-center overflow-hidden select-none touch-none bg-black/25"
         role="dialog"
         aria-modal="true"
         aria-label="Royal Wedding Invitation Envelope"

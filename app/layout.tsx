@@ -61,6 +61,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { MobileDesktopFix } from "@/components/MobileDesktopFix";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -72,10 +74,12 @@ export default function RootLayout({
       className={`${cormorant.variable} ${jakarta.variable} ${alexBrush.variable} ${amiri.variable} scroll-smooth`}
     >
       <body className="min-h-screen min-h-[100dvh] w-full bg-[#FFF9FB] text-[#2A1621] antialiased selection:bg-[#D45B7D] selection:text-white overflow-x-hidden relative">
-        {/* LAYER 3 — SCROLLING CONTENT */}
-        <main className="relative z-10 w-full min-h-[100dvh]">
-          {children}
-        </main>
+        <MobileDesktopFix>
+          {/* LAYER 3 — SCROLLING CONTENT */}
+          <main className="relative z-10 w-full min-h-[100dvh]">
+            {children}
+          </main>
+        </MobileDesktopFix>
       </body>
     </html>
   );

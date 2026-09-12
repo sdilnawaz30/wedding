@@ -110,7 +110,7 @@ export function CinematicIntro({ onComplete, onTransitionStart }: CinematicIntro
 
   return (
     <div
-      className={`fixed inset-0 z-[9999] bg-gradient-to-b from-[#1C1217] to-[#120B0E] cinematic-layer transition-opacity duration-[1200ms] ease-in-out ${
+      className={`fixed top-0 left-0 w-full h-[var(--scaled-vh,100vh)] z-[9999] bg-gradient-to-b from-[#1C1217] to-[#120B0E] cinematic-layer transition-opacity duration-[1200ms] ease-in-out ${
         isFadingOut ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
