@@ -469,10 +469,10 @@ export function HeartScratchDate() {
                   SAVE THE DATE
                 </span>
                 <h3 className="font-serif font-bold text-2xl sm:text-3xl text-[#2B2528] tracking-wider leading-none text-shadow-light my-1">
-                  18.10.2026
+                  18 October 2026
                 </h3>
                 <p className="font-serif italic text-xs sm:text-sm text-[#3B3336] font-medium text-shadow-light">
-                  Sunday, 18 October 2026
+                  Sunday
                 </p>
               </div>
             </div>
