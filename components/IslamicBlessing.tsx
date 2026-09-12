@@ -23,35 +23,7 @@ export function IslamicBlessing() {
       {/* FLOATING INVITATION CONTENT */}
       <div className="w-full max-w-[390px] mx-auto flex flex-col items-center text-center relative opacity-100 z-10">
         
-        {/* NEW SECTION: SAVE THE DATE */}
-        <SectionTitle title="SAVE THE DATE" />
-        
-        <div className="w-full bg-[#FFF9FB]/60 backdrop-blur-[2px] shadow-[0_4px_15px_rgba(183,110,121,0.08)] rounded-2xl p-4 sm:p-5 text-center border border-[#B76E79]/20 my-4 relative">
-          <FloralCorner position="top-left" size={24} className="-top-2 -left-2 opacity-60 mix-blend-multiply" />
-          <FloralCorner position="top-right" size={24} className="-top-2 -right-2 opacity-60 mix-blend-multiply" />
 
-          <p className="font-serif font-bold text-xl sm:text-2xl text-[#2B2528] tracking-wider mb-1 mt-2">
-            SUNDAY
-          </p>
-          <p className="font-sans text-sm sm:text-base text-[#B76E79] font-bold tracking-[0.2em] mb-4">
-            18 OCTOBER 2026
-          </p>
-          
-          <div className="flex flex-col gap-2 border-y border-[#B76E79]/20 py-3 mb-4">
-            <div className="flex justify-between items-center px-2 sm:px-6">
-              <span className="font-serif text-[#3B3336] font-semibold text-sm sm:text-base tracking-wide">NIKKAH</span>
-              <span className="font-sans text-[#B76E79] font-bold text-xs sm:text-sm tracking-wider">11:00 AM</span>
-            </div>
-            <div className="flex justify-between items-center px-2 sm:px-6">
-              <span className="font-serif text-[#3B3336] font-semibold text-sm sm:text-base tracking-wide">WALIMA</span>
-              <span className="font-sans text-[#B76E79] font-bold text-xs sm:text-sm tracking-wider">12:30 PM ONWARDS</span>
-            </div>
-          </div>
-          
-          <p className="font-serif italic text-[#3B3336] text-xs sm:text-sm font-medium">
-            7 Jumada Al-Awwal 1448 AH
-          </p>
-        </div>
 
         {/* FAMILY INVITATION MESSAGE */}
         <div className="text-center mb-6 mt-2">
