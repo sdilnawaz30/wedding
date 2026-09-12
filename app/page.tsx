@@ -76,11 +76,11 @@ export default function Home() {
           ceremonyTime={weddingData.ceremonies.nikah.time}
         />
 
-        {/* Dedicated Islamic Blessing & Quran Verse Section */}
-        <IslamicBlessing />
-
         {/* Interactive Heart Scratch-Off Date & Countdown Timer Section */}
         <HeartScratchDate />
+
+        {/* Dedicated Islamic Blessing & Quran Verse Section */}
+        <IslamicBlessing />
 
         {/* Formal Family Invitation & Lineage Section */}
         <FamilyInvitation />
